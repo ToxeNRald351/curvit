@@ -1,0 +1,115 @@
+.archivo-narrow {
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.source-sans-3 {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("TCTD_December_NewYear.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container1 {
+    max-width: 800px; /* Common A4 format width */
+    min-height: 83vh;
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    background-color: #202C59;
+    color: whitesmoke;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-bottom: black 2px solid;
+}
+
+.head-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head-text {
+    margin: 0 0 0 10px;
+}
+
+img {
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 10px;
+}
+
+.main-section {
+    flex: 0 0 68%; /* Take up 75% of container width */
+    background-color: whitesmoke;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.sidebar {
+    flex: 0 0 32%; /* Take up 25% of container width */
+    background-color: rgb(208, 208, 208);
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-left: black 2px solid;
+}
+
+.contact-v {
+    margin: 20px 0 10px 0;
+}
+
+.contact-i {
+    margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-section {
+    min-height: 83vh;
+    flex: 1; /* Take up all free space */
+    }
+    
+    .sidebar {
+        flex: 0 0 auto; /* Reset flex basis */
+        width: 100%; /* Take up full width */
+        align-self: end;
+        border-top: black 2px solid;
+        border-left: none;
+    }
+}
+
+@media only screen and (max-width: 392px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head-text {
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+}
